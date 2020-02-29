@@ -23,7 +23,7 @@ class App {
                 return changeItem($data);
             case 'deleteItem':
                 require_once 'services/deleteItem.php';
-                return deleteItem();
+                return deleteItem($data);
             case 'logout':
                 require_once 'services/logout.php';
                 return logout($data);
