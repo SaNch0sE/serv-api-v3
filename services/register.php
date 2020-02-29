@@ -3,6 +3,7 @@ function register($data)
 {
     $output['ok'] = true;
 	validate("register", $data);
+	$users = json_decode(file_get_contents('users.json'), true);
 	if (isset($users[0]['id'])) {
 		foreach ($users as $arr => $subArr) {
 			if ($subArr['login'] === $data['login']) {
