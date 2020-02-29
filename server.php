@@ -23,7 +23,10 @@ class App {
                 return changeItem($data);
             case 'deleteItem':
                 require_once 'services/deleteItem.php';
-                return deleteItem($data);
+                return deleteItem();
+            case 'logout':
+                require_once 'services/logout.php';
+                return logout($data);
             default:
                 return json_encode(array('error' => 'Invalid action'));
         }
