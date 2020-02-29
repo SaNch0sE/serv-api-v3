@@ -25,7 +25,7 @@ class App {
                 require_once 'services/deleteItem.php';
                 return deleteItem($data);
             default:
-                return json_decode(array('error' => 'Invalid action'));
+                return json_encode(array('error' => 'Invalid action'));
         }
     }
 }
